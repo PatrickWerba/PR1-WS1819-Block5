@@ -37,6 +37,24 @@ public class EmployeeManager {
 
     }
 
+    public Employee findByMaxSalary() {
+
+        double maxSalary = 0.0;
+        Employee result = null;
+
+        for(Employee e : employees) {
+            if(e.getSalary() > maxSalary) {
+                maxSalary = e.getSalary();
+                result = e;
+            }
+        }
+
+        return result;
+
+    }
+
+
+
 
 
 }
